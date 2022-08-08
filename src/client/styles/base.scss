@@ -1,0 +1,53 @@
+body {
+  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: 100vh;
+  background-color: cadetblue;
+  text-align: center;
+  width: 90%;
+
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #000787;
+  margin-bottom: 1em;
+  padding-top: 1.5em;
+}
+
+/* .table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid rgb(234, 0, 0);
+  background-color: cadetblue;
+} */
+.results {
+  border-collapse: collapse;
+  border-spacing: 0;
+ 
+  text-align: left;
+}
+
+.enterURL {
+  width: 100%;
+  min-height: 30px;
+  border-radius: 5px;
+  padding-left: 1em;
+  margin-top: 5px;
+}
+
+
+main {
+  flex: 2;
+}
+
+section {
+  max-width: 800px;
+  margin: 50px auto;
+  border: 1px solid rgb(234, 0, 0);
+  background-color: aquamarine;
+}

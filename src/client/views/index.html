@@ -2,41 +2,84 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
+        <title>NLP App</title>
+        <link rel="stylesheet" href="/styles/resets.scss">
+        <link rel="stylesheet" href="../styles/base.css">
+        <link rel="stylesheet" href="/styles/header.scss">
+        <link rel="stylesheet" href="/styles/form.scss">
+        <link rel="stylesheet" href="/styles/footer.scss">
     </head>
 
     <body>
 
         <header>
-            <div class="">
-                Logo
+            <div class="title">
+                This is the greatest and best NLP tool ever.  Tribute.
             </div>
-            <div class="">
-                navigation
+            <div class="title">
+                Give 'er a go..
             </div>
         </header>
 
         <main>
+            <!-- <section>
+                <form class="enterURL" action="/nlp" method="post">
+                    <input type="text" name="url" placeholder="Enter a URL">
+                    <input type="submit" value="Submit">
+            </section> -->
             <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                <form class="enterURL" onsubmit="return handleSubmit(event)">
+                    <input id="name" type="text" name="input" onblur="onBlur()" placeholder="Enter URL">
+                    <input type="submit" value="submit" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
 
             <section>
                 <strong>Form Results:</strong>
-                <div id="results"></div>
+                <div class="results" id="results">
+                    <!-- the content will be added here by JS -->
+                    <ul>
+                        <li class = "list">
+                            <h4>Polarity -</p>
+                            <caption id="polarity"></caption>
+                            <p>Confidence -</p>
+                            <caption id="polarity_confidence"></caption>
+                        </li>
+                        <li class = "list">
+                            <h4>Subjectivity -</h4>
+                            <caption id="subjectivity"></caption>
+                            <h4>Confidence -</h4>
+                            <caption id="subjectivity_confidence"></caption>
+                        </li>
+                        <li class = "list">
+                            <h4>Sentiment -</h4>
+                            <caption id="sentiment"></caption>
+                            <h4>Confidence -</h4>
+                            <caption id="sentiment_confidence"></caption>
+                        </li>
+                        <li class="list">
+                            <h4>
+                                Text -
+                            </h4>
+                            <caption id="text"></caption>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </main>
-
+        <script>
+            // if ('serviceWorker' in navigator) {
+            //     window.addEventListener('load', () => {
+            //         navigator.serviceWorker.register('/service-worker.js').then(registration => {
+            //             console.log('SW registered: ', registration);
+            //         });
+            //     });
+            // } else {
+            //     console.log("There is an Error with Service Worker");
+            // }
+        </script>
         <footer>
-            <p>This is a footer</p>
+            <p>You have just experienced a DonkeyKlaws Inc. product. </p>
         </footer>
 
     </body>
